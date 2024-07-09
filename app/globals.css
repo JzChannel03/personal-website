@@ -2,28 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: linear-gradient(to bottom right, #baf2e9, #ffffff);
+}
+.embla {
+  --slide-height: 100%;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+  height: 100%;
+  margin: auto;
+  width: 100%;
+}
+.embla__container {
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  height: calc(var(--slide-spacing) + var(--slide-height));
+  margin-top: calc(var(--slide-spacing) * -1);
+  touch-action: pan-x pinch-zoom;
+}
+.embla-slide {
+  flex: 0 0 var(--slide-size);
+  min-height: 0;
+  padding-top: var(--slide-spacing);
+}
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.full {
+  @apply w-full h-full;
+}
+
+.body-shadow {
+  -webkit-box-shadow: 0px -4px 34px -4px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0px -4px 34px -4px rgba(0, 0, 0, 0.19);
+  box-shadow: 0px -4px 34px -4px rgba(0, 0, 0, 0.19);
+}
+.body-shadow-inset {
+  -webkit-box-shadow: inset 0px -4px 34px 7px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: inset 0px -4px 34px 7px rgba(0, 0, 0, 0.19);
+  box-shadow: inset 0px -4px 34px 7px rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+  @apply text-4xl font-bold;
+}
+h2 {
+  @apply text-3xl font-bold;
+}
+h3 {
+  @apply text-2xl font-bold;
+}
+h4 {
+  @apply text-xl;
+}
+h5 {
+  @apply text-lg;
+}
+h6 {
+  @apply text-base;
+}
+
+li a {
+}
+
+li > a {
+}
+
+ul + p {
+}
+
+ul ~ p {
+}
+
+.logo {
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para profundidad */
+  overflow: hidden; /* Asegura que los bordes de la imagen se mantengan dentro de los bordes redondeados */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+.logo:hover {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el cursor */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
 }
 
 @layer utilities {
