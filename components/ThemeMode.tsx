@@ -7,13 +7,13 @@ const ThemeMode = () => {
   return (
     <div className="absolute bottom-2 right-2">
       <IconSVG
+        icon={LightModeIcon}
+        className="text-yellow-400"
+        allowDarkMode={false}
         onClick={() => {
           console.log("click");
           changeTheme();
         }}
-        className="text-yellow-400"
-        icon={LightModeIcon}
-        alt="Light Mode"
       />
     </div>
   );

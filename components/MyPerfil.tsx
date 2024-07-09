@@ -14,14 +14,12 @@ const MyPerfil = () => {
     <div className="bg-white dark:bg-black rounded-l-2xl p-5 flex flex-row justify-between items-center w-11/12 h-full">
       <div className="flex flex-row gap-3">
         <IconSVG icon={MediumIcon} linkUrl="https://medium.com/@jzchannel03" />
-        <IconSVG icon={GithubIcon} />
-        <IconSVG icon={LinkedinIcon} />
-        <IconSVG icon={TwitterIcon} />
+        <IconSVG icon={GithubIcon} linkUrl="https://github.com/JzChannel03" />
         <IconSVG
-          icon={LightModeIcon}
-          className="text-yellow-400"
-          allowDarkMode={false}
+          icon={LinkedinIcon}
+          linkUrl="https://www.linkedin.com/in/joseventura03/"
         />
+        <IconSVG icon={TwitterIcon} linkUrl="https://x.com/jzchannel03" />
       </div>
       <h5 className="dark:text-white">Jose Ventura</h5>
       <Image
