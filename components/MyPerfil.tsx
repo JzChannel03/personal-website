@@ -4,7 +4,6 @@ import MediumIcon from "../public/assets/svg-icons/medium.svg";
 import GithubIcon from "../public/assets/svg-icons/github.svg";
 import LinkedinIcon from "../public/assets/svg-icons/linkedin.svg";
 import TwitterIcon from "../public/assets/svg-icons/twitter.svg";
-import LightModeIcon from "../public/assets/svg-icons/light-mode.svg";
 import Image from "next/image";
 import JoseVenturaImg from "../public/assets/images/z-logo-dev.webp";
 import IconSVG from "./IconSVG";
